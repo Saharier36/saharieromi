@@ -140,27 +140,32 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-1">
               {allLinksForMobile.map((link) => (
-                <SheetClose asChild key={link.href}>
-                  <a
-                    href={link.href}
-                    className="font-body rounded-lg px-3 py-3 text-lg text-text-secondary transition-colors hover:bg-bg-secondary hover:text-accent"
-                  >
-                    {link.label}
-                  </a>
+                <SheetClose
+                  key={link.href}
+                  render={
+                    <a
+                      href={link.href}
+                      className="font-body rounded-lg px-3 py-3 text-lg text-text-secondary transition-colors hover:bg-bg-secondary hover:text-accent"
+                    />
+                  }
+                >
+                  {link.label}
                 </SheetClose>
               ))}
             </div>
 
             <div className="border-border mt-8 flex justify-center border-t pt-6">
-              <SheetClose asChild>
-                <a
-                  href={RESUME_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-accent px-8 py-3 text-center font-body text-sm text-bg-primary transition-colors hover:bg-accent-hover"
-                >
-                  Resume View
-                </a>
+              <SheetClose
+                render={
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-accent px-8 py-3 text-center font-body text-sm text-bg-primary transition-colors hover:bg-accent-hover"
+                  />
+                }
+              >
+                Resume View
               </SheetClose>
             </div>
           </SheetContent>
