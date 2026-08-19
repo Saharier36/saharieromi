@@ -1,6 +1,6 @@
 "use client";
-import { BorderGlow } from "@/components/ui-custom/border-glow";
 import profileImage from "@/assets/Images/profile.png";
+import { BorderGlow } from "@/components/ui-custom/border-glow";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
+      className="w-full overflow-x-clip px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
     >
       <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr] md:gap-16">
         {/* Avatar */}

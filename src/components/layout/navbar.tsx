@@ -22,7 +22,7 @@ const RESUME_URL =
   "https://drive.google.com/file/d/1N7QZ5iwzXwKfAKW4Fl9uKWeHEm4B54NM/view?usp=sharing";
 
 const mainLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
@@ -36,7 +36,7 @@ const moreLinks = [
 ];
 
 const allLinksForMobile = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
