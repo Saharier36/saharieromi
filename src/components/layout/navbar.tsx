@@ -142,6 +142,7 @@ export function Navbar() {
               {allLinksForMobile.map((link) => (
                 <SheetClose
                   key={link.href}
+                  nativeButton={false}
                   render={
                     <a
                       href={link.href}
@@ -156,6 +157,7 @@ export function Navbar() {
 
             <div className="border-border mt-8 flex justify-center border-t pt-6">
               <SheetClose
+                nativeButton={false}
                 render={
                   <a
                     href={RESUME_URL}

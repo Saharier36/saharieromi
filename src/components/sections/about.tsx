@@ -1,8 +1,8 @@
 "use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { BorderGlow } from "@/components/ui-custom/border-glow";
+import profileImage from "@/assets/Images/profile.png";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const stats = [
   { label: "Projects", value: "10+" },
@@ -28,7 +28,7 @@ export function About() {
         >
           <div className="border-accent h-48 w-48 overflow-hidden rounded-full border-4 sm:h-56 sm:w-56 md:h-64 md:w-64">
             <Image
-              src="/images/profile.png"
+              src={profileImage}
               alt="Golam Saharier Omi"
               width={256}
               height={256}
