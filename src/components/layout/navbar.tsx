@@ -99,7 +99,7 @@ export function Navbar() {
                   render={
                     <a
                       href={link.href}
-                      className="font-body text-text-secondary hover:text-accent"
+                      className="font-body text-text-secondary hover:text-accent cursor-pointer"
                     />
                   }
                 >

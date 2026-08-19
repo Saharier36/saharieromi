@@ -1,9 +1,9 @@
-
+import { Navbar } from "@/components/layout/navbar";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const sharpie = localFont({
   src: "../fonts/Sharpie-Variable.woff2",
@@ -45,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem={false}
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
