@@ -1,6 +1,7 @@
 import { RibbonMeshBackground } from "@/components/ui-custom/ribbon-mesh-background";
 import { ShuffleRotatingText } from "@/components/ui-custom/shuffle-rotating-text";
 import { ShinyText } from "@/components/ui-custom/shiny-text";
+import { SocialLinks } from "../ui-custom/social-links";
 
 const ROLES = ["Full-Stack", "Frontend", "Next.js"];
 
@@ -23,7 +24,8 @@ export function Hero() {
         />
 
         <h1 className="font-display text-6xl leading-none text-text-primary sm:text-6xl md:text-7xl lg:text-8xl">
-          <ShuffleRotatingText words={ROLES} /> Developer
+          <ShuffleRotatingText words={ROLES} />{" "}
+          <span className="text-accent">Developer</span>
         </h1>
 
         <p className="font-body max-w-2xl text-base font-medium text-text-secondary sm:text-lg">
@@ -31,6 +33,7 @@ export function Hero() {
           a simple website — from marketplaces and booking platforms to secure,
           scalable products built to solve real-world problems.
         </p>
+        <SocialLinks />
       </div>
     </section>
   );
