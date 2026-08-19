@@ -61,7 +61,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 py-5 sm:px-10">
+    <nav className="sticky top-0 z-50 flex items-center justify-between bg-bg-primary/80 px-6 py-5 backdrop-blur-md sm:px-10">
       <Link href="/" className="font-logo text-xl text-text-primary">
         SAHARIER OMI
       </Link>
@@ -81,7 +81,7 @@ export function Navbar() {
             <DropdownMenuTrigger
               onMouseEnter={openMore}
               onMouseLeave={scheduleCloseMore}
-              className="flex items-center gap-1 font-body text-sm text-text-secondary outline-none transition-colors hover:text-accent cursor-pointer"
+              className="flex cursor-pointer items-center gap-1 font-body text-sm text-text-secondary outline-none transition-colors hover:text-accent"
             >
               More
               <ChevronDown className="h-3.5 w-3.5" strokeWidth={1.75} />
@@ -99,7 +99,7 @@ export function Navbar() {
                   render={
                     <a
                       href={link.href}
-                      className="font-body text-text-secondary hover:text-accent cursor-pointer"
+                      className="font-body cursor-pointer text-text-secondary hover:text-accent"
                     />
                   }
                 >
