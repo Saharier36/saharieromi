@@ -1,5 +1,6 @@
 import { RibbonMeshBackground } from "@/components/ui-custom/ribbon-mesh-background";
 import { ShuffleRotatingText } from "@/components/ui-custom/shuffle-rotating-text";
+import { ShinyText } from "@/components/ui-custom/shiny-text";
 
 const ROLES = ["Full-Stack", "Frontend", "Next.js"];
 
@@ -12,11 +13,20 @@ export function Hero() {
       <RibbonMeshBackground />
 
       <div className="relative z-10 flex min-h-[calc(100vh-88px)] flex-col items-center justify-center gap-6 px-6 text-center">
+        <ShinyText
+          text="Hi, I'm Golam Saharier Omi"
+          className="font-display text-xl font-bold tracking-[0.1em] uppercase sm:text-2xl md:text-3xl"
+          color="var(--text-secondary)"
+          shineColor="var(--shine-color)"
+          speed={2.5}
+          spread={100}
+        />
+
         <h1 className="font-display text-6xl leading-none text-text-primary sm:text-6xl md:text-7xl lg:text-8xl">
           <ShuffleRotatingText words={ROLES} /> Developer
         </h1>
 
-        <p className="font-body max-w-2xl text-base text-text-secondary sm:text-lg">
+        <p className="font-body max-w-2xl text-base font-medium text-text-secondary sm:text-lg">
           I build full-stack web applications for businesses that need more than
           a simple website — from marketplaces and booking platforms to secure,
           scalable products built to solve real-world problems.

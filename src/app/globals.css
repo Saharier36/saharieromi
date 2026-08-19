@@ -53,6 +53,7 @@
   --accent-hover: #090c9b;
   --accent-subtle: rgba(180, 197, 228, 0.25);
   --on-accent: #fbfff1;
+  --shine-color: var(--text-primary);
 
   --background: var(--bg-primary);
   --foreground: var(--text-primary);
@@ -101,6 +102,7 @@
   --accent-hover: #090c9b;
   --accent-subtle: rgba(61, 82, 213, 0.15);
   --on-accent: #fbfff1;
+  --shine-color: var(--on-accent);
 
   --background: var(--bg-primary);
   --foreground: var(--text-primary);
