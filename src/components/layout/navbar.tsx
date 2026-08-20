@@ -75,7 +75,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-bg-primary/80 px-6 py-5 backdrop-blur-md sm:px-10">
       <Link href="/" className="font-logo text-xl text-text-primary">
-        SAHARIER OMI
+        SAHARIER <span className="text-primary">OMI</span>
       </Link>
 
       <div className="flex items-center gap-3 sm:gap-5 lg:gap-8">

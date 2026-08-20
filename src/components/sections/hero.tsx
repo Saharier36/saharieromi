@@ -11,7 +11,6 @@ import { SocialLinks } from "../ui-custom/social-links";
 
 const ROLES = ["Full-Stack", "Frontend", "Next.js"];
 
-
 const BUTTON_COLORS = {
   light: {
     projectsBase: "#3c3744",
@@ -58,9 +57,9 @@ export function Hero() {
         </h1>
 
         <p className="font-body max-w-2xl text-base font-medium text-text-secondary sm:text-lg">
-          I build full-stack web applications for businesses that need more than
-          a simple website — from marketplaces and booking platforms to secure,
-          scalable products built to solve real-world problems.
+          I build modern, scalable web applications tailored to your needs —
+          turning ideas and real-world requirements into secure,
+          high-performance digital solutions.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
