@@ -1,8 +1,8 @@
 "use client";
 
 import { LetterSwap } from "@/components/ui-custom/letter-swap";
-import { ThemeToggle } from "@/components/ui-custom/theme-toggle";
 import { SpecularButton } from "@/components/ui-custom/specular-button";
+import { ThemeToggle } from "@/components/ui-custom/theme-toggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +18,17 @@ import {
 import { ChevronDown, Menu } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import {
+  FiAward,
+  FiBookOpen,
+  FiBriefcase,
+  FiCode,
+  FiFolder,
+  FiHome,
+  FiMail,
+  FiUser,
+} from "react-icons/fi";
+import { SiReaddotcv } from "react-icons/si";
 
 const RESUME_URL =
   "https://drive.google.com/file/d/1N7QZ5iwzXwKfAKW4Fl9uKWeHEm4B54NM/view?usp=sharing";
@@ -37,14 +48,14 @@ const moreLinks = [
 ];
 
 const allLinksForMobile = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", icon: FiHome },
+  { label: "About", href: "#about", icon: FiUser },
+  { label: "Projects", href: "#projects", icon: FiFolder },
+  { label: "Skills", href: "#skills", icon: FiCode },
+  { label: "Experience", href: "#experience", icon: FiBriefcase },
+  { label: "Education", href: "#education", icon: FiBookOpen },
+  { label: "Certifications", href: "#certifications", icon: FiAward },
+  { label: "Contact", href: "#contact", icon: FiMail },
 ];
 
 export function Navbar() {
@@ -130,6 +141,7 @@ export function Navbar() {
             shineFade={35}
             proximity={200}
           >
+            <SiReaddotcv />
             View Resume
           </SpecularButton>
         </div>
@@ -152,20 +164,25 @@ export function Navbar() {
             className="bg-bg-primary border-border flex flex-col px-6 py-8"
           >
             <div className="flex flex-col gap-1">
-              {allLinksForMobile.map((link) => (
-                <SheetClose
-                  key={link.href}
-                  nativeButton={false}
-                  render={
-                    <a
-                      href={link.href}
-                      className="font-body rounded-lg px-3 py-3 text-lg text-text-secondary transition-colors hover:bg-bg-secondary hover:text-accent"
-                    />
-                  }
-                >
-                  {link.label}
-                </SheetClose>
-              ))}
+              {allLinksForMobile.map((link) => {
+                const Icon = link.icon;
+
+                return (
+                  <SheetClose
+                    key={link.href}
+                    nativeButton={false}
+                    render={
+                      <a
+                        href={link.href}
+                        className="font-body flex items-center gap-3 rounded-lg px-3 py-3 text-lg text-text-secondary transition-colors hover:bg-bg-secondary hover:text-accent"
+                      />
+                    }
+                  >
+                    <Icon className="h-5 w-5" />
+                    {link.label}
+                  </SheetClose>
+                );
+              })}
             </div>
 
             <div className="border-border mt-8 flex justify-center border-t pt-6">
@@ -176,11 +193,12 @@ export function Navbar() {
                     href={RESUME_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-border/60 bg-accent px-8 py-3 text-center font-body text-sm text-on-accent shadow-[0_0_20px_var(--accent-subtle)] transition-colors hover:bg-accent-hover"
+                    className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-accent px-8 py-3 text-center font-body text-sm text-on-accent shadow-[0_0_20px_var(--accent-subtle)] transition-colors hover:bg-accent-hover"
                   />
                 }
               >
-                Resume View
+                <SiReaddotcv />
+                View Resume
               </SheetClose>
             </div>
           </SheetContent>
