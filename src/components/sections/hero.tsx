@@ -1,11 +1,40 @@
+"use client";
+
 import { RibbonMeshBackground } from "@/components/ui-custom/ribbon-mesh-background";
-import { ShuffleRotatingText } from "@/components/ui-custom/shuffle-rotating-text";
 import { ShinyText } from "@/components/ui-custom/shiny-text";
+import { ShuffleRotatingText } from "@/components/ui-custom/shuffle-rotating-text";
+import { SpecularButton } from "@/components/ui-custom/specular-button";
+import { LayoutGrid, Send } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { SocialLinks } from "../ui-custom/social-links";
 
 const ROLES = ["Full-Stack", "Frontend", "Next.js"];
 
+
+const BUTTON_COLORS = {
+  light: {
+    projectsBase: "#3c3744",
+    touchLine: "#111111",
+    touchBase: "#3c3744",
+  },
+  dark: {
+    projectsBase: "#b4c5e4",
+    touchLine: "#ffffff",
+    touchBase: "#b4c5e4",
+  },
+};
+
 export function Hero() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  // Default to dark-mode colors until mounted, matching defaultTheme="dark"
+  const isLight = mounted && resolvedTheme === "light";
+  const colors = isLight ? BUTTON_COLORS.light : BUTTON_COLORS.dark;
+
   return (
     <section
       id="home"
@@ -33,6 +62,45 @@ export function Hero() {
           a simple website — from marketplaces and booking platforms to secure,
           scalable products built to solve real-world problems.
         </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <SpecularButton
+            href="#projects"
+            size="sm"
+            radius={999}
+            tint="#3d52d5"
+            tintOpacity={0.15}
+            blur={8}
+            textColor="var(--accent)"
+            lineColor="#3d52d5"
+            baseColor={colors.projectsBase}
+            shineSize={14}
+            shineFade={35}
+            proximity={220}
+          >
+            <LayoutGrid className="h-4 w-4" strokeWidth={1.75} />
+            View Projects
+          </SpecularButton>
+
+          <SpecularButton
+            href="#contact"
+            size="sm"
+            radius={999}
+            tint="var(--bg-secondary)"
+            tintOpacity={0.4}
+            blur={8}
+            textColor="var(--text-primary)"
+            lineColor={colors.touchLine}
+            baseColor={colors.touchBase}
+            shineSize={14}
+            shineFade={35}
+            proximity={220}
+          >
+            <Send className="h-4 w-4" strokeWidth={1.75} />
+            Get in Touch
+          </SpecularButton>
+        </div>
+
         <SocialLinks />
       </div>
     </section>

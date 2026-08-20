@@ -2,6 +2,7 @@
 
 import { LetterSwap } from "@/components/ui-custom/letter-swap";
 import { ThemeToggle } from "@/components/ui-custom/theme-toggle";
+import { SpecularButton } from "@/components/ui-custom/specular-button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -112,14 +113,26 @@ export function Navbar() {
 
         <ThemeToggle />
 
-        <a
-          href={RESUME_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden rounded-full bg-accent px-5 py-2 font-body text-sm text-bg-primary transition-colors hover:bg-accent-hover sm:inline-block"
-        >
-          Resume View
-        </a>
+        <div className="hidden sm:inline-block">
+          <SpecularButton
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+            radius={999}
+            tint="#3d52d5"
+            tintHover="#090c9b"
+            tintOpacity={1}
+            textColor="var(--on-accent)"
+            lineColor="#fbfff1"
+            baseColor="#b4c5e4"
+            shineSize={14}
+            shineFade={35}
+            proximity={200}
+          >
+            View Resume
+          </SpecularButton>
+        </div>
 
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
@@ -163,7 +176,7 @@ export function Navbar() {
                     href={RESUME_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full bg-accent px-8 py-3 text-center font-body text-sm text-bg-primary transition-colors hover:bg-accent-hover"
+                    className="rounded-full border border-border/60 bg-accent px-8 py-3 text-center font-body text-sm text-on-accent shadow-[0_0_20px_var(--accent-subtle)] transition-colors hover:bg-accent-hover"
                   />
                 }
               >
