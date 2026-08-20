@@ -36,8 +36,8 @@ const RESUME_URL =
 const mainLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -50,8 +50,8 @@ const moreLinks = [
 const allLinksForMobile = [
   { label: "Home", href: "#home", icon: FiHome },
   { label: "About", href: "#about", icon: FiUser },
-  { label: "Projects", href: "#projects", icon: FiFolder },
   { label: "Skills", href: "#skills", icon: FiCode },
+  { label: "Projects", href: "#projects", icon: FiFolder },
   { label: "Experience", href: "#experience", icon: FiBriefcase },
   { label: "Education", href: "#education", icon: FiBookOpen },
   { label: "Certifications", href: "#certifications", icon: FiAward },
