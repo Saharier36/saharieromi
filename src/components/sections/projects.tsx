@@ -1,12 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
-import { projects } from "@/data/projects";
+import { GlassButton } from "@/components/ui-custom/glass-button";
 import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
 import { TechIcon } from "@/components/ui-custom/tech-icon";
+import { projects } from "@/data/projects";
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
+import { PiLinkSimpleBold } from "react-icons/pi";
+
+const GITHUB_PROJECTS_URL = "https://github.com/Saharier36?tab=repositories";
 
 export function Projects() {
   return (
@@ -22,7 +27,6 @@ export function Projects() {
           <h2 className="font-display text-3xl font-bold text-text-primary sm:text-4xl">
             My <span className="text-accent">Projects</span>
           </h2>
-
           <div className="mt-4 h-px w-full bg-border" />
         </motion.div>
 
@@ -33,14 +37,10 @@ export function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: i * 0.06,
-              }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.06 }}
             >
               <SpotlightCard className="flex h-full flex-col">
-                <div className="relative h-32 w-full overflow-hidden rounded-t-2xl sm:h-36">
+                <div className="relative h-40 w-full shrink-0 overflow-hidden sm:h-44">
                   <Image
                     src={project.image}
                     alt={project.name}
@@ -50,9 +50,14 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-1 flex-col gap-2.5 p-4">
-                  <h3 className="font-display text-base font-bold text-text-primary">
-                    {project.name}
-                  </h3>
+                  <div>
+                    <h3 className="font-display text-base font-bold text-text-primary">
+                      {project.name}
+                    </h3>
+                    <p className="font-display mt-0.5 text-xs leading-snug text-text-secondary">
+                      {project.tagline}
+                    </p>
+                  </div>
 
                   <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((tech) => (
@@ -72,32 +77,42 @@ export function Projects() {
                     ))}
                   </ul>
 
-                  <div className="border-border mt-auto flex items-center gap-3 border-t pt-3">
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.name} GitHub repository`}
-                      className="text-text-secondary transition-colors hover:text-accent"
-                    >
-                      <FaGithub className="h-4 w-4" />
-                    </a>
-
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.name} live site`}
-                      className="text-text-secondary transition-colors hover:text-accent"
-                    >
-                      <ExternalLink className="h-4 w-4" strokeWidth={1.75} />
-                    </a>
+                  <div className="border-border mt-auto grid grid-cols-2 gap-2 border-t pt-3">
+                    <GlassButton href={project.repoUrl} variant="neutral">
+                      <FaGithub className="h-3.5 w-3.5" />
+                      Code
+                    </GlassButton>
+                    <GlassButton href={project.liveUrl} variant="accent">
+                      <PiLinkSimpleBold
+                        className="h-3.5 w-3.5"
+                        strokeWidth={1.75}
+                      />
+                      Live
+                    </GlassButton>
                   </div>
                 </div>
               </SpotlightCard>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mt-6 flex justify-center sm:mt-8"
+        >
+          <Link
+            href={GITHUB_PROJECTS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-all duration-300 hover:text-accent-hover hover:underline hover:underline-offset-4"
+          >
+            View All Projects on GitHub
+            <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
