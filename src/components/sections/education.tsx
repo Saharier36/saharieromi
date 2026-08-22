@@ -40,7 +40,7 @@ export function Education() {
                   <h3 className="font-display text-lg font-bold sm:text-xl">
                     {entry.institution}
                   </h3>
-                  <p className="font-body text-sm text-text-secondary sm:text-base">
+                  <p className="font-body text-sm font-medium text-text-secondary sm:text-base">
                     {entry.degree}
                   </p>
                   <p className="font-body text-xs text-text-muted sm:text-sm">
