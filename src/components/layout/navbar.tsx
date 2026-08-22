@@ -142,7 +142,7 @@ export function Navbar() {
             proximity={200}
           >
             <SiReaddotcv />
-            View Resume
+            My Resume
           </SpecularButton>
         </div>
 
@@ -198,7 +198,7 @@ export function Navbar() {
                 }
               >
                 <SiReaddotcv />
-                View Resume
+                My Resume
               </SheetClose>
             </div>
           </SheetContent>
