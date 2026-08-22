@@ -22,7 +22,7 @@ export function Certifications() {
           className="mb-8 sm:mb-10"
         >
           <h2 className="font-display text-3xl font-bold text-text-primary sm:text-4xl">
-            <span className="text-accent">Certifications</span>
+            Certified <span className="text-accent">Courses</span>
           </h2>
 
           <div className="mt-4 h-px w-full bg-border" />
