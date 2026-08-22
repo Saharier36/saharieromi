@@ -10,7 +10,7 @@ export function Skills() {
       id="skills"
       className="w-full px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -17,7 +17,7 @@ export function About() {
       id="about"
       className="w-full overflow-x-clip px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-5xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
