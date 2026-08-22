@@ -1,12 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
 import {
   motion,
-  useMotionValue,
   useAnimationFrame,
+  useMotionValue,
   useTransform,
 } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface ShinyTextProps {
   text: string;

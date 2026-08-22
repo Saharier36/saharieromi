@@ -1,8 +1,8 @@
 "use client";
 
+import type { LucideIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import { useState, type MouseEvent } from "react";
-import type { LucideIcon } from "lucide-react";
 
 interface TechIconProps {
   name: string;

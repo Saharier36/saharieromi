@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { ExternalLink } from "lucide-react";
-import { certifications } from "@/data/certifications";
 import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
 import { TechIcon } from "@/components/ui-custom/tech-icon";
+import { certifications } from "@/data/certifications";
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export function Certifications() {
   return (

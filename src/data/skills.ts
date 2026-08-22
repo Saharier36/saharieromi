@@ -17,8 +17,8 @@ import vscodeLogo from "@/assets/logos/vscode.png";
 
 import mongodbLogo from "@/assets/logos/mongodb.svg";
 import postgresqlLogo from "@/assets/logos/postgresql.svg";
-import prismaLogo from "@/assets/logos/prisma.svg";
 import postmanLogo from "@/assets/logos/postman.svg";
+import prismaLogo from "@/assets/logos/prisma.svg";
 
 import figmaLogo from "@/assets/logos/figma.svg";
 import gitLogo from "@/assets/logos/git.svg";

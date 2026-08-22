@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { education } from "@/data/education";
 import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
+import { education } from "@/data/education";
+import { motion } from "framer-motion";
 
 export function Education() {
   return (

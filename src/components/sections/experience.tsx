@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { experience } from "@/data/experience";
 import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
+import { experience } from "@/data/experience";
+import { motion } from "framer-motion";
 
 export function Experience() {
   return (

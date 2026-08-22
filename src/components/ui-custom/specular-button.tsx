@@ -1,7 +1,7 @@
 "use client";
 
+import { Color, Mesh, Program, Renderer, Triangle } from "ogl";
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
-import { Renderer, Program, Mesh, Triangle, Color } from "ogl";
 import styles from "./specular-button.module.css";
 
 const PAD = 20;
