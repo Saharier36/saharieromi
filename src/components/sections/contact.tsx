@@ -76,7 +76,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="w-full px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
+      className="w-full overflow-x-clip px-6 py-16 sm:px-10 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-5xl">
         <motion.div
