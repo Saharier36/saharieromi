@@ -33,13 +33,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       suppressHydrationWarning
       className={cn(
-        "h-full overflow-x-hidden antialiased",
+        "h-full antialiased",
         sharpie.variable,
         quilon.variable,
         rowan.variable,
       )}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">
+      <body className="min-h-full flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
