@@ -8,7 +8,6 @@ import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 
 export default function Home() {
-  throw new Error("Testing the error page!");
   return (
     <div>
       <main>
