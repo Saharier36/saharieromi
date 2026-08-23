@@ -25,7 +25,7 @@ const rowan = localFont({
 export const metadata: Metadata = {
   title: "Saharier Omi — Full Stack Developer",
   description:
-    "Full stack developer specializing in marketplace and booking platforms — React, Next.js, Node.js, Express, and PostgreSQL.",
+    "Full-Stack Developer specializing in turning real-world requirements into clean, high-performance web applications.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
