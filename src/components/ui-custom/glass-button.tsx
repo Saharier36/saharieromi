@@ -24,7 +24,7 @@ export function GlassButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${styles.btn} inline-flex items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 font-body text-xs font-medium backdrop-blur-md transition-all duration-300 ${variantClass} ${className}`}
+      className={`${styles.btn} inline-flex items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 font-body text-xs font-medium backdrop-blur-md transition-all duration-300 active:scale-95 ${variantClass} ${className}`}
     >
       {children}
     </a>
