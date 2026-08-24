@@ -226,3 +226,34 @@ body {
     @apply border-border outline-ring/50;
   }
 }
+
+/* ---------------------------------------------
+   Custom Scrollbar
+--------------------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

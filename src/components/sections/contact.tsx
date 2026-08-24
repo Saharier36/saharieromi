@@ -179,7 +179,7 @@ export function Contact() {
                       name="message"
                       required
                       rows={3}
-                      placeholder="Tell me about your project..."
+                      placeholder="Drop your message or query here..."
                       className="bg-bg-secondary/60 border-border focus:ring-accent font-body resize-none rounded-lg border px-3 py-2 text-sm text-text-primary outline-none placeholder:text-text-muted focus:ring-2"
                     />
                   </div>

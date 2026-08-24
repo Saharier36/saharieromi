@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-accent/10 w-full px-6 py-8 sm:px-10">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
-        <span className="font-logo text-xl text-text-primary sm:text-3xl">
+        <span className="font-logo text-2xl text-text-primary sm:text-3xl">
           SAHARIER OMI
         </span>
 
