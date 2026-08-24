@@ -4,7 +4,7 @@ import { RibbonMeshBackground } from "@/components/ui-custom/ribbon-mesh-backgro
 import { ShinyText } from "@/components/ui-custom/shiny-text";
 import { ShuffleRotatingText } from "@/components/ui-custom/shuffle-rotating-text";
 import { SpecularButton } from "@/components/ui-custom/specular-button";
-import { ChevronDown, LayoutGrid, Mouse, Send } from "lucide-react";
+import { ChevronDown, LayoutGrid, Send } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { SocialLinks } from "../ui-custom/social-links";
@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[calc(100vh-88px)] w-full overflow-hidden"
+      className="relative min-h-[calc(100vh-88px)] w-full overflow-hidden scroll-mt-24"
     >
       <RibbonMeshBackground />
 
@@ -108,8 +108,7 @@ export function Hero() {
         aria-label="Scroll down"
         className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 cursor-pointer text-muted-foreground/50 hover:text-primary transition-colors animate-bounce"
       >
-        <Mouse className="h-5 w-5" strokeWidth={1.5} />
-        <ChevronDown className="h-3.5 w-3.5" strokeWidth={1.5} />
+        <ChevronDown className="h-5.5 w-5.5" strokeWidth={1.5} />
       </a>
     </section>
   );
