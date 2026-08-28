@@ -4,8 +4,8 @@ import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
 import { TechIcon } from "@/components/ui-custom/tech-icon";
 import { certifications } from "@/data/certifications";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { RxExternalLink } from "react-icons/rx";
 
 export function Certifications() {
   return (
@@ -40,8 +40,9 @@ export function Certifications() {
                 ease: "easeOut",
                 delay: i * 0.08,
               }}
+              className="h-full"
             >
-              <SpotlightCard className="group relative flex flex-col gap-3 p-5 sm:p-6">
+              <SpotlightCard className="group relative flex h-full flex-col gap-3 p-5 sm:p-6">
                 <span className="bg-accent absolute top-0 left-0 h-full w-0.5 scale-y-50 opacity-0 transition-all duration-300 group-hover:scale-y-100 group-hover:opacity-100" />
 
                 <div className="flex items-start justify-between gap-4">
@@ -86,10 +87,10 @@ export function Certifications() {
                   href={cert.certificateUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/link mt-1 inline-flex items-center gap-1.5 self-start text-sm font-medium text-accent transition-all duration-300 hover:text-accent-hover hover:underline hover:underline-offset-4"
+                  className="group/link mt-auto inline-flex items-center gap-1.5 self-start text-sm font-medium text-accent transition-all duration-300 hover:underline hover:underline-offset-4"
                 >
                   View Certificate
-                  <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  <RxExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                 </a>
               </SpotlightCard>
             </motion.div>

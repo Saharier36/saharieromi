@@ -5,11 +5,11 @@ import { SpotlightCard } from "@/components/ui-custom/spotlight-card";
 import { TechIcon } from "@/components/ui-custom/tech-icon";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { PiLinkSimpleBold } from "react-icons/pi";
+import { RxExternalLink } from "react-icons/rx";
 
 const GITHUB_PROJECTS_URL = "https://github.com/Saharier36?tab=repositories";
 
@@ -107,10 +107,10 @@ export function Projects() {
             href={GITHUB_PROJECTS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-all duration-300 hover:text-accent-hover hover:underline hover:underline-offset-4"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-all duration-300 hover:underline hover:underline-offset-4"
           >
             View All Projects on GitHub
-            <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <RxExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
       </div>
